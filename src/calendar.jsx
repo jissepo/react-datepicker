@@ -185,7 +185,6 @@ export default class Calendar extends React.Component {
 
   constructor(props) {
     super(props);
-
     this.containerRef = React.createRef();
 
     this.state = {
