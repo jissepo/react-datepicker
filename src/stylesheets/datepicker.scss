@@ -726,6 +726,10 @@
   }
 }
 
+.react-datepicker__current-month {
+  font-weight: 400;
+  text-transform: capitalize;
+}
 
 .react-datepicker__day {
   color: #000;
@@ -741,15 +745,22 @@
     opacity: 0.4;
   }
 
+  &--keyboard-selected {
+    color: #fff;
+  }
+
   &--selected {
-    &:hover {
-      color: #fff;
-    }
+    color: #fff;
   }
 
   &--highlighted {
     background-color: rgba(0, 121, 188, 0.1);
     color: #0079BC;
+
+    &:hover {
+      background-color: #004bbc40;
+      color: #fff;
+    }
   }
 
   &-name {
