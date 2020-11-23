@@ -27,7 +27,7 @@ const globals = {
 };
 
 const config = {
-  input: "src/index.jsx",
+  input: path.resolve(__dirname, "src")+"/index.jsx",
   output: [
     {
       file: pkg.browser,
