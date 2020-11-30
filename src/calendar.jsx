@@ -548,7 +548,7 @@ export default class Calendar extends React.Component {
       nextMonthAriaLabel = "Next Month",
       nextYearAriaLabel = "Next Year"
     } = this.props;
-    console.log("Ree");
+
     return (
       <button
         type="button"
