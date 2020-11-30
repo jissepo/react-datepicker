@@ -87,7 +87,6 @@
   text-align: center;
   background-color: transparent;
   border-top-left-radius: $datepicker__border-radius;
-  padding-top: 8px;
   position: relative;
 
   &--time {
@@ -234,7 +233,7 @@
 }
 
 .react-datepicker__month {
-  margin: $datepicker__margin;
+  margin: 0;
   text-align: center;
 
   .react-datepicker__month-text,
@@ -388,7 +387,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .react-datepicker__day-name,
