@@ -738,32 +738,55 @@
   font-size: 1rem;
   line-height: 2rem;
 
+  &:hover {
+    color: #fff;
+    background-color: #0079BC;
+  }
+
+  &:focus {
+    outline: none;
+    color: #fff;
+    background-color: #0079BC;
+    box-shadow: 0 0 0 3px #0079BC;
+  }
+
+  &--highlighted {
+    background-color: rgba(0, 121, 188, 0.1);
+    color: #0079BC;
+  }
+  
   &--today {
-    background-color: #E5D195;
+    border: 1px solid #E9EFF7;
+    position: relative;
     font-weight: 400;
+    background-color: #fff;
+    color: #000;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      right: 3px;
+      bottom: 3px;
+      border: 2px solid #7B511F;
+      border-radius: 4px;
+      background-color: transparent;
+      z-index: 1;
+    }
+
   }
 
   &--outside-month {
     opacity: 0.4;
   }
 
-  &--keyboard-selected {
-    color: #fff;
-  }
-
+  &--keyboard-selected,
   &--selected {
-    background-color: #E5D195;
+    background: rgba(0, 121, 188, 0.1);
+    border: 0.5px solid #00679F;
   }
 
-  &--highlighted {
-    background-color: rgba(0, 121, 188, 0.1);
-    color: #0079BC;
-
-    &:hover {
-      background-color: #004bbc40;
-      color: #fff;
-    }
-  }
 
   &-name {
     color: #0079BC;
@@ -775,4 +798,22 @@
     width: 2rem;
   }
 
+}
+
+.react-datepicker {
+  &__year {
+    & &-wrapper {
+      margin: 0 2rem;
+      max-width: none;
+      justify-content: center;
+    }
+  }
+  
+  &-year {
+
+    &-header {
+      display: none;
+    }
+
+  }
 }
