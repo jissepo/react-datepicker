@@ -860,6 +860,8 @@ export default class DatePicker extends React.Component {
         previousMonthAriaLabel={this.props.previousMonthAriaLabel}
         previousYearButtonLabel={this.props.previousYearButtonLabel}
         nextYearButtonLabel={this.props.nextYearButtonLabel}
+        previousYearAriaLabel={this.props.previousYearAriaLabel}
+        nextYearAriaLabel={this.props.nextYearAriaLabel}
         timeInputLabel={this.props.timeInputLabel}
         disabledKeyboardNavigation={this.props.disabledKeyboardNavigation}
         renderCustomHeader={this.props.renderCustomHeader}
