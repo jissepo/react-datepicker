@@ -469,10 +469,7 @@ export default class Calendar extends React.Component {
         onClick={clickHandler}
         aria-label={isForYear ? previousYearAriaLabel : previousMonthAriaLabel}
       >
-        {isForYear
-          ? this.props.previousYearButtonLabel
-          : (<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6667 2.66602L5.33342 7.99934L10.6667 13.3327" stroke="#0079BC" strokeWidth="2"/></svg>
-          )}
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6667 2.66602L5.33342 7.99934L10.6667 13.3327" stroke="#0079BC" strokeWidth="2"/></svg>
       </button>
     );
   };
@@ -556,9 +553,7 @@ export default class Calendar extends React.Component {
         onClick={clickHandler}
         aria-label={isForYear ? nextYearAriaLabel : nextMonthAriaLabel}
       >
-        {isForYear
-          ? this.props.nextYearButtonLabel
-          : (<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.33325 2.66602L10.6666 7.99934L5.33325 13.3327" stroke="#0079BC" strokeWidth="2"/></svg>)}
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.33325 2.66602L10.6666 7.99934L5.33325 13.3327" stroke="#0079BC" strokeWidth="2"/></svg>
       </button>
     );
   };
