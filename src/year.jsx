@@ -59,7 +59,7 @@ export default class Year extends React.Component {
 
   render() {
     const yearsList = [];
-    const { date, yearItemNumber } = this.props;
+    const { date, yearItemNumber, minDate, maxDate } = this.props;
     const { startPeriod, endPeriod } = utils.getYearsPeriod(date, yearItemNumber);
 
     for (let y = startPeriod; y <= endPeriod; y++) {
