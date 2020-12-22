@@ -125,7 +125,7 @@
     "start": "yarn --cwd docs-site install && yarn --cwd docs-site start",
     "test": "cross-env NODE_ENV=test karma start karma.conf.js --single-run",
     "test:watch": "cross-env NODE_ENV=test karma start karma.conf.js --watch",
-    "build": "cross-env NODE_ENV=production run-p build:** && run-p css:**",
+    "build": "npm version patch && cross-env NODE_ENV=production run-p build:** && run-p css:**",
     "build-dev": "cross-env NODE_ENV=development run-p build:** && run-p css:**",
     "css:prod": "node-sass --output-style compressed src/stylesheets/datepicker.scss > dist/react-datepicker.min.css",
     "css:modules:prod": "node-sass --output-style compressed src/stylesheets/datepicker-cssmodules.scss | tee dist/react-datepicker-cssmodules.min.css dist/react-datepicker-min.module.css",
