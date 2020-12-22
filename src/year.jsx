@@ -70,6 +70,7 @@ export default class Year extends React.Component {
           }}
           className={this.getYearClassNames(y)}
           key={y}
+          aria-hidden={(minDate || maxDate) && utils.isYearDisabled(y, this.props)}
         >
           {y}
         </div>
