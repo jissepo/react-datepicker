@@ -6,8 +6,11 @@
 |---|---|---|---|
 |`adjustDateOnChange`|`bool`|||
 |`allowSameDay`|`bool`|`false`||
+|`ariaDescribedBy`|`string`|||
+|`ariaInvalid`|`string`|||
 |`ariaLabelClose`|`string`|||
 |`ariaLabelledBy`|`string`|||
+|`ariaRequired`|`string`|||
 |`autoComplete`|`string`|||
 |`autoFocus`|`bool`|||
 |`calendarClassName`|`string`|||

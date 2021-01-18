@@ -24,6 +24,7 @@ export default class Month extends React.Component {
     highlightDates: PropTypes.instanceOf(Map),
     includeDates: PropTypes.array,
     inline: PropTypes.bool,
+    shouldFocusDayInline: PropTypes.bool,
     locale: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.shape({ locale: PropTypes.object })
@@ -62,7 +63,7 @@ export default class Month extends React.Component {
     monthShowsDuplicateDaysStart: PropTypes.bool
   };
 
-  MONTH_REFS = Array(12).fill().map(() => React.createRef());
+  MONTH_REFS = [...Array(12)].map(() => React.createRef());
 
   isDisabled = date => utils.isDayDisabled(date, this.props);
 
@@ -155,6 +156,7 @@ export default class Month extends React.Component {
           excludeDates={this.props.excludeDates}
           includeDates={this.props.includeDates}
           inline={this.props.inline}
+          shouldFocusDayInline={this.props.shouldFocusDayInline}
           highlightDates={this.props.highlightDates}
           selectingDate={this.props.selectingDate}
           filterDate={this.props.filterDate}
@@ -242,10 +244,12 @@ export default class Month extends React.Component {
   };
 
   getMonthClassNames = m => {
-    const { day, startDate, endDate, selected, minDate, maxDate, preSelection } = this.props;
+    const { day, startDate, endDate, selected, minDate, maxDate, preSelection, monthClassName } = this.props;
+    const _monthClassName = monthClassName ? monthClassName(day) : undefined;
     return classnames(
       "react-datepicker__month-text",
       `react-datepicker__month-${m}`,
+      _monthClassName,
       {
         "react-datepicker__month--disabled":
           (minDate || maxDate) &&
@@ -391,14 +395,11 @@ export default class Month extends React.Component {
       selectsStart,
       selectsEnd,
       showMonthYearPicker,
-      showQuarterYearPicker,
-      monthClassName
+      showQuarterYearPicker
     } = this.props;
-    const _monthClassName = monthClassName ? monthClassName(day) : undefined;
-
+    
     return classnames(
       "react-datepicker__month",
-      _monthClassName,
       {
         "react-datepicker__month--selecting-range":
           selectingDate && (selectsStart || selectsEnd)
