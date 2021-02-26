@@ -326,6 +326,7 @@ export default class Day extends React.Component {
       tabIndex={this.getTabIndex()}
       aria-label={this.getAriaLabel()}
       role="button"
+      aria-hidden={this.isDisabled()}
       aria-disabled={this.isDisabled()}
     >
       {this.renderDayContents()}

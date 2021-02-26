@@ -421,6 +421,7 @@ export default class Month extends React.Component {
         className={this.getClassNames()}
         onMouseLeave={this.handleMouseLeave}
         aria-label=""
+        aria-hidden={this.props.inline}
       >
         {showMonthYearPicker
           ? this.renderMonths()
