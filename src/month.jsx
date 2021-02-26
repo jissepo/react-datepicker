@@ -420,7 +420,7 @@ export default class Month extends React.Component {
       <div
         className={this.getClassNames()}
         onMouseLeave={this.handleMouseLeave}
-        aria-label={`${ariaLabelPrefix} ${utils.formatDate(day, "yyyy-MM")}`}
+        aria-label=""
       >
         {showMonthYearPicker
           ? this.renderMonths()

@@ -380,6 +380,7 @@ export default class Calendar extends React.Component {
               "react-datepicker__day-name",
               weekDayClassName
             )}
+            aria-label={this.props.inline ? '' : weekDayName}
           >
             {weekDayName}
           </div>

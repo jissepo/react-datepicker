@@ -253,7 +253,7 @@ export default class Day extends React.Component {
         ? ariaLabelPrefixWhenDisabled
         : ariaLabelPrefixWhenEnabled;
 
-    return `${prefix} ${formatDate(day, "PPPP")}`;
+    return this.isDisabled() || this.isExcluded() ? '' :`${prefix} ${formatDate(day, "PPPP")}`;
   };
 
   getTabIndex = (selected, preSelection) => {
