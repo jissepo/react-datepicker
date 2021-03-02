@@ -257,12 +257,16 @@ export default class Day extends React.Component {
   };
 
   getTabIndex = (selected, preSelection) => {
+    if (this.props.inline) {
+      return -1;
+    }
+
     const selectedDay = selected || this.props.selected;
     const preSelectionDay = preSelection || this.props.preSelection;
 
     const tabIndex =
-      (this.isKeyboardSelected() || 
-      (this.isSameDay(selectedDay) && isSameDay(preSelectionDay, selectedDay)) || this.isInRange()) && !this.isDisabled()
+      this.isKeyboardSelected() || 
+      (this.isSameDay(selectedDay) && isSameDay(preSelectionDay, selectedDay)) || !this.isDisabled()
         ? 0
         : -1;
 
